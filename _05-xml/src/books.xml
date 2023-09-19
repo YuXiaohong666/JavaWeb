@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    以上内容就是xml文件内容的声明
+    version="1.0"   表示xml的版本
+    encoding="utf-8"  encoding表示xml文件的编码
+
+-->
+<books>  <!-- books表示多个图书信息 -->
+    <book sn="SN123456789">  <!-- book表示一个图书信息   sn属性表示图书序列号 -->
+        <name>时间简史</name>  <!-- name标签表示书名 -->
+        <author>霍金</author> <!-- author标签表示作者 -->
+        <price>75</price>   <!-- price标签表示价格 -->
+    </book>
+    <book sn="SN123456769">  <!-- book表示一个图书信息   sn属性表示图书序列号 -->
+        <name>Java从入门到入土</name>  <!-- name标签表示书名 -->
+        <author>安格斯</author> <!-- author标签表示作者 -->
+        <price>9.9</price>   <!-- price标签表示价格 -->
+    </book>
+</books>
