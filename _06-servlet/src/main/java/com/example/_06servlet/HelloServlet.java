@@ -22,12 +22,12 @@ public class HelloServlet implements Servlet {
         System.out.println("2.init初始化");
 
 //        1.可以获取Servlet程序的别名 servlet-name 的值
-        System.out.println("servlet的别名是"+servletConfig.getServletName());
+        System.out.println("servlet的别名是" + servletConfig.getServletName());
 //        2.获取初始化参数init-param
-        System.out.println("初始化参数username的值是"+servletConfig.getInitParameter("username"));
-        System.out.println("初始化参数url的值是"+servletConfig.getInitParameter("url"));
+        System.out.println("初始化参数username的值是" + servletConfig.getInitParameter("username"));
+        System.out.println("初始化参数url的值是" + servletConfig.getInitParameter("url"));
 //        3.获取servletContext对象
-        System.out.println("获取servletContext对象是"+servletConfig.getServletContext());
+        System.out.println("获取servletContext对象是" + servletConfig.getServletContext());
     }
 
     @Override
@@ -37,34 +37,35 @@ public class HelloServlet implements Servlet {
 
     /**
      * service方法是专门用来处理请求和响应的
+     *
      * @param servletRequest
      * @param servletResponse
      * @throws ServletException
      * @throws IOException
-     * */
+     */
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
 //        执行你的功能代码
         System.out.println("3.service === Hello Servlet 被访问了");
-//类型转换（因为它有getMethod()方法）
+// 类型转换（因为它有getMethod()方法）
         HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
-//获取请求方式
-        String method= httpServletRequest.getMethod();
+        // 获取请求方式
+        String method = httpServletRequest.getMethod();
 
-        if("GET".equals(method)){
+        if ("GET".equals(method)) {
             doGet();
-        }else if("POST".equals(method)){
+        } else if ("POST".equals(method)) {
             doPost();
         }
     }
 
-//    做get请求的操作
-    public void doGet(){
+    //    做get请求的操作
+    public void doGet() {
         System.out.println("get请求");
     }
 
-//    做post请求的方法
-    public void doPost(){
+    //    做post请求的方法
+    public void doPost() {
         System.out.println("post请求");
     }
 
