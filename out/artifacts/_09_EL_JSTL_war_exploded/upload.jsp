@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="http://localhost:8080/_09_EL_JSTL/uploadServlet" method="post" enctype="multipart/form-data">
+<form action="uploadServlet" method="post" enctype="multipart/form-data">
     <label>
         用户名：
         <input type="text" name="username">

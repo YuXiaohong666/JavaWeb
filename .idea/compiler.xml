@@ -9,5 +9,8 @@
         <module name="_06-servlet" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="_05-web" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

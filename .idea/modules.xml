@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/_05-xml/_05-xml.iml" filepath="$PROJECT_DIR$/_05-xml/_05-xml.iml" />
-      <module fileurl="file://$PROJECT_DIR$/_06-servlet/_06-servlet.iml" filepath="$PROJECT_DIR$/_06-servlet/_06-servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/_07_servlet/_07_servlet.iml" filepath="$PROJECT_DIR$/_07_servlet/_07_servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/_08_jsp/_08_jsp.iml" filepath="$PROJECT_DIR$/_08_jsp/_08_jsp.iml" />
       <module fileurl="file://$PROJECT_DIR$/_09_EL_JSTL/_09_EL_JSTL.iml" filepath="$PROJECT_DIR$/_09_EL_JSTL/_09_EL_JSTL.iml" />

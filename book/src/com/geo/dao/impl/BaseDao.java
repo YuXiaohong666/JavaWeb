@@ -4,6 +4,7 @@ import com.geo.utils.JdbcUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -66,11 +67,23 @@ public abstract class BaseDao {
      * @Params: T：返回的类型的泛型
      * @Return
      */
-    
+
     public <T> List<T> queryForList(Class<T> type, String sql, Object... args) {
         Connection connection = JdbcUtils.getConnection();
         try {
             return queryRunner.query(connection, sql, new BeanListHandler<>(type), args);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            JdbcUtils.close(connection);
+        }
+    }
+
+    //执行返回一行一列的数据
+    public Object queryForSingleValue(String sql, Object... args) {
+        Connection connection = JdbcUtils.getConnection();
+        try {
+            return queryRunner.query(connection, sql, new ScalarHandler(), args);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
