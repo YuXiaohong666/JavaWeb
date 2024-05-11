@@ -51,4 +51,14 @@ public class BookDaoTest {
             System.out.println(book);
         }
     }
+
+    @Test
+    public void queryForPageTotalCountByPrice() {
+        System.out.println(bookDao.queryForPageTotalCountByPrice(10, 50));
+    }
+
+    @Test
+    public void queryForPageItemsByPrice() {
+        System.out.println(bookDao.queryForPageItemsByPrice(0, Page.PAGE_SIZE, 10, 50));
+    }
 }
