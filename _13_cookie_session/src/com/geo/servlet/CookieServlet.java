@@ -11,6 +11,30 @@ import java.io.IOException;
 
 @WebServlet(name = "CookieServlet", value = "/cookieServlet")
 public class CookieServlet extends BaseServlet {
+    protected void testPath(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Cookie cookie = new Cookie("default", "defaultLife");
+        cookie.setPath(req.getContextPath() + "/abc");
+        resp.addCookie(cookie);
+    }
+
+    protected void life3600(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Cookie cookie = new Cookie("default", "defaultLife");
+        cookie.setMaxAge(3600);  //设置存活时间
+        resp.addCookie(cookie);
+    }
+
+    protected void defaultLife(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Cookie cookie = new Cookie("default", "defaultLife");
+        cookie.setMaxAge(-1);  //设置存活时间
+        resp.addCookie(cookie);
+    }
+
+    protected void deleteNow(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Cookie cookie = new Cookie("default", "defaultLife");
+        cookie.setMaxAge(0);  //设置存活时间
+        resp.addCookie(cookie);
+    }
+
     /**
      * @param req
      * @param resp
