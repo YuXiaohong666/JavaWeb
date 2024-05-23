@@ -18,6 +18,18 @@ import java.lang.reflect.Method;
 public class UserServlet extends BaseServlet {
     UserService userService = new UserServiceImpl();
 
+    /**
+     * @param req
+     * @param resp
+     * @throws ServletException
+     * @throws IOException
+     * @描述: 处理注销业务
+     */
+    public void logOut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.getSession().invalidate();
+        resp.sendRedirect(req.getContextPath());
+    }
+
     public void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("处理登录的需求");
         // 1.获取请求的参数
@@ -32,6 +44,8 @@ public class UserServlet extends BaseServlet {
             req.setAttribute("username", username);
             req.getRequestDispatcher("/pages/user/login.jsp").forward(req, resp);
         } else {
+//            保存用户登录的信息到Session域中
+            req.getSession().setAttribute("user", login);
             //说明登录成功，跳转到登录成功页面
             req.getRequestDispatcher("/pages/user/login_success.jsp").forward(req, resp);
         }
