@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+    <!--    filter标签用于配置一个filter过滤器-->
+    <!--    <filter>-->
+    <!--        &lt;!&ndash;        给filter起一个别名&ndash;&gt;-->
+    <!--        <filter-name>AdminFilter</filter-name>-->
+    <!--        &lt;!&ndash;        配置filter的全类名&ndash;&gt;-->
+    <!--        <filter-class>com.geo.AdminFilter</filter-class>-->
+    <!--    </filter>-->
+    <!--    &lt;!&ndash;    配置filter过滤器的拦截路径&ndash;&gt;-->
+    <!--    <filter-mapping>-->
+    <!--        &lt;!&ndash;        表示当前的拦截路径给哪个filter使用&ndash;&gt;-->
+    <!--        <filter-name>AdminFilter</filter-name>-->
+    <!--        &lt;!&ndash;        配置拦截路径，斜杠表示：http://ip:port/工程路径/ 映射到web目录&ndash;&gt;-->
+    <!--        &lt;!&ndash;        表示web目录下的admin目录下的全部资源&ndash;&gt;-->
+    <!--        <url-pattern>/index.jsp</url-pattern>-->
+    <!--    </filter-mapping>-->
+</web-app>

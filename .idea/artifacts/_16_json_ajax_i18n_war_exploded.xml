@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="_16_json_ajax_i18n:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/_16_json_ajax_i18n_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="_16_json_ajax_i18n" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="_16_json_ajax_i18n/web/Web" />
+    </root>
+  </artifact>
+</component>
